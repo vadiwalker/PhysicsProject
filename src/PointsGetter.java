@@ -3,18 +3,17 @@
  */
 
 public class PointsGetter {
-    
-    private double DELTA = 1;
+
+    private double DELTA = 20;
     private double curN = 0;
     private double curSin = 0;
     private double nextX = 0;
     private double nextY = 0;
     
-    PointsGetter() {
-        
+    public PointsGetter() {
     }
     
-    PointsGetter(double DELTA, double curN, double curSin, double nextX, double nextY) {
+    public PointsGetter(double DELTA, double curN, double curSin, double nextX, double nextY) {
         this.DELTA = DELTA;
         this.curN = curN;
         this.curSin = curSin;
@@ -22,15 +21,15 @@ public class PointsGetter {
         this.nextY = nextY;
     }
     
-    double getDELTA() {
+    public double getDELTA() {
         return DELTA;
     }
     
-    double getNextX() {
+    public double getNextX() {
         return nextX;
     }
     
-    double getNextY() {
+    public double getNextY() {
         return nextY;
     }
     
@@ -44,5 +43,4 @@ public class PointsGetter {
         nextX += Math.tan(Math.asin(curSin)) / DELTA;
         nextY += DELTA;
     }
-    
 }

@@ -1,3 +1,5 @@
+package com.parser;
+import com.model.*;
 /**
  * Created by vadim on 26.11.16.
  */

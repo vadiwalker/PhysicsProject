@@ -1,22 +1,33 @@
+import com.parser.*;
+import com.model.*;
+import com.graphics.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by vadim on 26.11.16.
  */
 class Main {
     public static void main(String[] args) {
         Parser parser = new Parser();
-        Node node = null;
-        String expr = "(132 + 72 / x + y - 65) ^ (23-x+6*(17/y)) ^ 1".replaceAll(" ", "");
-        System.out.println(expr);
-        try {
-            node = parser.getNode(expr);
-        } catch(ArithmeticException e) {
-            System.out.println(e.getMessage());
-        }
-        if (node != null) {
-            System.out.println(node.toString());
-            System.out.println(node.evaluate(9, 17));
-        }
+        Painter painter = new Painter();
+        String func = "1";
+        Node f = parser.getNode(func);
+
+        PointsGetter pget = new PointsGetter();
+        int x = 100, y = 0;
+
+        List<Point> points = new ArrayList<>();
+
+        int height = 200;
+        int iters = height / pget.getDELTA();
+
+
 
     }
 
 }
+
+
+

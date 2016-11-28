@@ -1,3 +1,6 @@
+package com.model;
+import com.parser.L;
+
 import java.util.HashMap;
 
 /**
